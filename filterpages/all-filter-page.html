@@ -1,0 +1,177 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% load desktop_menu %}
+{% load top_category %}
+{% block content %}
+
+<style>
+    .category {
+        display: none;
+    }
+    .brand {
+        display: none;
+    }
+    .loadMore {
+        width: 150px;
+        color: #fff;
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+        padding: 5px;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        background-color:#ED2224;
+        transition: .3s;
+    }
+    .loadMore:hover {
+        color: #ED2224;
+        background-color: #fff;
+        border: 1px solid #ED2224;
+        text-decoration: none;
+        }
+    .noContent {
+        color: #000 !important;
+        background-color: transparent !important;
+        pointer-events: none;
+    }
+    .product{
+        box-shadow: 0 8px 16px 0 rgba(167, 165, 165, 0.2);
+    }
+    .product:hover{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    .filter-box{
+        border-radius: 10px;
+        background-color: #fbf6e9;
+    }
+    .js-offcanvus-result {
+        position: absolute;
+        top: 0;
+        left: -300px;
+        background-color: #fbf6e9;
+        width: 300px;
+        height: 100%;
+        z-index: 99;
+        transition: left 0.3s ease-in-out;
+    }
+    .js-offcanvus-result.active {
+        left: 0;
+    }
+</style>
+<main class="main">
+    <!-- it is for mobile screen start -->
+    <button class="btn btn-light d-block d-md-none js-offcanvus w-100 d-flex justify-content-start fw-bold" type="button"><i class="fa-solid fa-bars" style="color: #000;"></i></button>
+    <div class="js-offcanvus-result" >
+        <div class="py-4 px-3">
+            <div class="heading heading-flex">
+                <div class="heading-center">
+                    <h5 class="text-left">Brands</h5>
+                    <!-- End .title -->
+                </div><!-- End .heading-left -->
+            </div><!-- End .heading -->
+            <div class="row ">
+                {% for p in request|brands %}
+                <div class="col-12 ">
+                    <a style="color:#595c59; font-weight: 500;" href="Javascript:void(0)" class="js-get-request" data-ids="{{ p.id }}" data-key="brand">{{ p.name }}</a>
+                </div>
+                {% endfor %}
+            </div>         
+            <div class="heading heading-flex mb-1">
+                <div class="heading-center mt-3">
+                    <h5 class="mb-1 text-left">Price Range</h5><!-- End .title -->
+                </div><!-- End .heading-left -->
+            </div><!-- End .heading -->
+            <div class="row">
+                {% for p in request|price_ranges %}
+                <div class="col-12">
+                    <a style="color:#595c59; font-weight: 500;" href="Javascript:void(0)" class="js-get-request" id="price_ran" data-ids="{{ p.id }}" data-key="price_ran">{{ p.price_range }}</a>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="heading heading-flex mb-1">
+                <div class="heading-center mt-3">
+                    <h5 class="mb-1 text-left">Categories</h5><!-- End .title -->
+                </div><!-- End .heading-left -->
+            </div><!-- End .heading -->
+            <div class="row ">
+                {% for p in request|category %}
+                <div class="col-12 ">
+                    <a style="color:#595c59; font-weight: 500;" href="Javascript:void(0)" class="js-get-request" id="category" data-ids="{{ p.id }}" data-key="category">{{ p.category_name }}</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- it is for mobile screen end -->
+     
+    <div class="container electronics my-5">
+        <div class="row">
+
+            <div class="col-md-3 d-none d-md-block">
+                <div class="filter-box py-4 px-3">
+                    <div class="heading heading-flex">
+                        <div class="heading-center">
+                            <h5 class="text-left">Brands</h5>
+                            <!-- End .title -->
+                        </div><!-- End .heading-left -->
+                    </div><!-- End .heading -->
+                    <div class="row brands">
+                        {% for p in request|brands %}
+                        <div class="col-3 col-md-12 brand">
+                            <a style="color:#595c59; font-weight: 500;" href="Javascript:void(0)" class="js-get-request" data-ids="{{ p.id }}" data-key="brand">{{ p.name }}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <a class="loadMoreBrands" style="color: #ED2224; cursor: pointer;">
+                        + View More
+                    </a>                
+                    <div class="heading heading-flex mb-1">
+                        <div class="heading-center mt-3">
+                            <h5 class="mb-1 text-left">Price Range</h5><!-- End .title -->
+                        </div><!-- End .heading-left -->
+                    </div><!-- End .heading -->
+                    <div class="row">
+                        {% for p in request|price_ranges %}
+                        <div class="col-3 col-md-12">
+                            <a style="color:#595c59; font-weight: 500;" href="Javascript:void(0)" class="js-get-request" id="price_ran" data-ids="{{ p.id }}" data-key="price_ran">{{ p.price_range }}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="heading heading-flex mb-1">
+                        <div class="heading-center mt-3">
+                            <h5 class="mb-1 text-left">Categories</h5><!-- End .title -->
+                        </div><!-- End .heading-left -->
+                    </div><!-- End .heading -->
+                    <div class="row categories">
+                        {% for p in request|category %}
+                        <div class="col-3 col-md-12 category">
+                            <a style="color:#595c59; font-weight: 500;" href="Javascript:void(0)" class="js-get-request" id="category" data-ids="{{ p.id }}" data-key="category">{{ p.category_name }}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <a class="loadMoreCategories" style="color: #ED2224; cursor: pointer;">
+                        + View More
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="heading heading-flex heading-border mb-3">
+                    <div class="heading-center">
+                        <h2 class="title mb-1"><span style="color: #ED2224;">All {{ main_cate }}</span> Products </h2><!-- End .title -->
+                    </div><!-- End .heading-left -->
+                </div><!-- End .heading -->
+                <div class="row equal" id="js-show-product">
+                    {% for p in products %}
+                        <!-- Includes (store/includes/product-card-design.html) -->
+                        {% include 'store/includes/product-card-design.html' %}
+                    {% endfor %}
+                </div>
+                <a href="" class="loadMore">Load More</a>
+            </div>
+        </div>
+    </div><!-- End .container -->
+</main><!-- End .main -->
+
+<script src="{% static 'store/js/robin/robin-filter-page.js' %}"></script>
+{% endblock %}
