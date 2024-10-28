@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique HTML Layout</title>
+</head>
+<body>
+    <!-- Using <nav> for page navigation -->
+    <nav>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>📜 My Unique HTML Design 🌟</h1>
+        <p><em>Exploring HTML's potential without CSS or JavaScript</em></p>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- Using <section> to organize content -->
+        <section id="home">
+            <header>
+                <h1>Welcome to My Unique HTML Layout 🌐</h1>
+                <p><em>Exploring the vast landscape of HTML elements</em></p>
+            </header>
+            <article>
+                <p>This page uses various unique HTML elements to create a layout without CSS or JavaScript. Enjoy the power of HTML!</p>
+            </article>
+        </section>
+
+        <!-- Using <aside> for sidebar content -->
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Did you know? HTML is short for <abbr title="Hypertext Markup Language">HTML</abbr> and it’s the foundation of the web.</p>
+            <p><mark>Highlighted text</mark> for important points.</p>
+        </aside>
+
+        <!-- Using <article> for standalone content items -->
+        <section id="about">
+            <h2>About Us</h2>
+            <article>
+                <header>
+                    <h3>Our Mission</h3>
+                </header>
+                <p>Our goal is to showcase how powerful HTML alone can be. This layout is created with unique HTML tags, making it informative and accessible without CSS or JavaScript.</p>
+            </article>
+        </section>
+
+        <!-- Using <figure> and <figcaption> for multimedia content -->
+        <section id="gallery">
+            <h2>Image Gallery</h2>
+            <figure>
+                <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+                <figcaption>Figure 1: Placeholder image with caption.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Using <kbd>, <samp>, and <var> for code-related content -->
+        <section id="shortcuts">
+            <h2>Keyboard Shortcuts</h2>
+            <p>To refresh this page, press <kbd>Ctrl</kbd> + <kbd>R</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>R</kbd> on macOS.</p>
+            <p>System Output: <samp>404 Not Found</samp></p>
+            <p>Formula: Area = <var>π</var> × <var>r</var><sup>2</sup></p>
+        </section>
+
+        <!-- Using <details> and <summary> for collapsible sections -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <details>
+                <summary>Why only HTML?</summary>
+                <p>HTML provides a wide range of tags for structure and interactivity without needing CSS or JavaScript.</p>
+            </details>
+            <details>
+                <summary>What is the purpose of this page?</summary>
+                <p>To demonstrate the power of HTML elements by creating a functional layout without additional styling or scripting.</p>
+            </details>
+        </section>
+
+        <!-- Using <address> for contact information -->
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <address>
+                Written by <a href="mailto:webmaster@example.com">John Doe</a>.<br>
+                Visit us at:<br>
+                Example.com<br>
+                Box 564, Disneyland<br>
+                USA
+            </address>
+        </section>
+
+    </main>
+
+    <!-- Using <table> for a grid-like structure -->
+    <table border="1" width="100%" cellpadding="10" cellspacing="0">
+        <tr>
+            <th colspan="2">About This Layout</th>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>What makes this unique?</summary>
+                    <p>This design uses only HTML tags. No CSS, no JavaScript, just HTML's structural elements.</p>
+                </details>
+            </td>
+            <td>
+                <blockquote cite="https://example.com">
+                    "Simplicity is the ultimate sophistication." - Leonardo da Vinci
+                </blockquote>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Highlighting content with <mark> and <abbr> -->
+    <section>
+        <h2><mark>Highlighted Section</mark></h2>
+        <p>This section contains highlighted content using the <code>&lt;mark&gt;</code> tag. HTML alone can <mark>highlight text</mark> for emphasis!</p>
+        <p>Did you know HTML stands for <abbr title="HyperText Markup Language">HTML</abbr>?</p>
+    </section>
+
+    <!-- Creating a FAQ with <details> and <summary> -->
+    <section>
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>What is this layout?</summary>
+            <p>A creative structure made solely with HTML tags to showcase unique layouts without CSS or JavaScript.</p>
+        </details>
+        <details>
+            <summary>Why no CSS?</summary>
+            <p>This layout is a demonstration of HTML's standalone capabilities. CSS is usually essential for design, but HTML can do more than you think!</p>
+        </details>
+    </section>
+
+    <!-- Using <figure> and <figcaption> for a visual structure -->
+    <figure>
+        <img src="https://via.placeholder.com/400" alt="Sample Image">
+        <figcaption>Figure 1: Sample image with caption.</figcaption>
+    </figure>
+
+    <!-- Using <datalist> to create a suggestion box -->
+    <section>
+        <h2>Search Suggestions</h2>
+        <label for="search">Type to see suggestions:</label>
+        <input list="suggestions" id="search" name="search">
+        <datalist id="suggestions">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JavaScript">
+            <option value="Python">
+            <option value="Django">
+        </datalist>
+    </section>
+
+    <!-- Using <meter> and <progress> to show measurements -->
+    <section>
+        <h2>Performance and Progress</h2>
+        <p>Battery Level:</p>
+        <meter value="0.7">70%</meter>
+
+        <p>File Upload Progress:</p>
+        <progress value="40" max="100">40%</progress>
+    </section>
+
+    <!-- Using <output> to display calculated results -->
+    <section>
+        <h2>Simple Calculator</h2>
+        <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+            <label for="a">Number 1:</label>
+            <input type="number" id="a" name="a" value="0">
+            <label for="b">Number 2:</label>
+            <input type="number" id="b" name="b" value="0">
+            <p>Result: <output name="result" for="a b">0</output></p>
+        </form>
+    </section>
+
+    <!-- Using <fieldset> and <legend> for grouping form elements -->
+    <section>
+        <h2>Personal Information Form</h2>
+        <form>
+            <fieldset>
+                <legend>Contact Details</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+            </fieldset>
+        </form>
+    </section>
+
+    <!-- Using <time> to mark dates and times -->
+    <section>
+        <h2>Event Schedule</h2>
+        <p>Event Date: <time datetime="2024-12-01">December 1, 2024</time></p>
+        <p>Event Start Time: <time datetime="2024-12-01T14:00">2:00 PM</time></p>
+    </section>
+
+    <!-- Using <details> and <summary> with some <blockquote> -->
+    <section>
+        <h2>Expandable Quotes</h2>
+        <details>
+            <summary>Quote of the Day</summary>
+            <blockquote cite="https://example.com">
+                "The journey of a thousand miles begins with a single step." - Lao Tzu
+            </blockquote>
+        </details>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Advanced HTML Layout. All rights reserved.</p>
+        <p>Thanks for viewing my HTML-only layout! 🌐</p>
+    </footer>
+
+</body>
+</html>
