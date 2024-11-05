@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+    justify-content: center;
+    padding-top: 10rem;
+}
+.m {
+    background-color: #eee;
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+.m:hover {
+    background-color: antiquewhite;
+    clip-path: polygon(
+        30% 0%,   /* Top middle */
+        70% 0%,   /* Top middle-right */
+        100% 30%, /* Right middle-top */
+        100% 70%, /* Right middle-bottom */
+        70% 100%, /* Bottom middle-right */
+        30% 100%, /* Bottom middle-left */
+        0% 70%,   /* Left middle-bottom */
+        0% 30%    /* Left middle-top */
+    );
+    transform: rotate(360deg);
+}
+.m:hover .card{
+    display: none;
+}
+.m:hover .card2{
+    display: block;
+}
+.card2 {
+    display: none;
+}
+
