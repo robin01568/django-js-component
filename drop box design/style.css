@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(60, 145, 214);
+}
+
+.drop-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.drop-box ul li {
+    position: relative;
+    padding-right: 15px;
+}
+.drop-box ul li:has(ul) {
+    font-weight: 700;
+    cursor: pointer;
+}
+.drop-box ul li:has(ul)::after {
+    content: "▶";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: transform 0.4s ease;
+}
+.drop-box ul li:has(ul):hover::after {
+    content: "▶";
+    transform: rotate(90deg);
+}
+.drop-box ul li ul {
+    display: none;
+    padding-left: 15px;
+}
+.drop-box ul li:hover > ul {
+    display: block;
+}
+.drop-box ul li:hover > ul {
+    display: block;
+}
+.drop-box ul li:hover > ul {
+    display: block;
+    padding-left: 10px;
+}
+
+/* .drop-box {
+    background-color: white;
+    width: 30vw;
+    margin: auto;
+    padding: 5px;
+}
+
+.drop-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drop-box ul li {
+    position: relative;
+    padding-right: 15px;
+}
+
+.drop-box ul li:has(ul) {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.drop-box ul li:has(ul)::after {
+    content: "▶";
+    position: absolute;
+    top: 0;
+    right: 5%;
+    transition: transform 0.5s ease;
+}
+
+.drop-box ul li:has(ul):hover::after {
+    content: "▼";
+    transform: rotate(360deg);
+}
+
+.drop-box ul li ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.drop-box ul li:hover > ul {
+    max-height: 500px;
+    padding-left: 10px;
+} */
